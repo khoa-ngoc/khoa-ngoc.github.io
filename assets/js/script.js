@@ -15,15 +15,15 @@ function flyingPages() {
       (navigator.connection.saveData || (navigator.connection.effectiveType || '').includes('2g'));
   if (!e && d) {
     var f = function (a) {
-        return new Promise(function (b, c) {
-          var d = document.createElement('link');
-          (d.rel = 'prefetch'),
-            (d.href = a),
-            (d.onload = b),
-            (d.onerror = c),
-            document.head.appendChild(d);
-        });
-      },
+      return new Promise(function (b, c) {
+        var d = document.createElement('link');
+        (d.rel = 'prefetch'),
+          (d.href = a),
+          (d.onload = b),
+          (d.onerror = c),
+          document.head.appendChild(d);
+      });
+    },
       g = function (a) {
         var b = setTimeout(function () {
           return p();
@@ -155,7 +155,7 @@ flyingPages();
           .stop()
           .animate({ scrollTop: $(anchor.attr('href')).offset().top - 5 }, 1000);
         e.preventDefault();
-      } catch (error) {}
+      } catch (error) { }
     });
 
     $('.navbar-nav').on('click', 'a', function () {
@@ -191,12 +191,9 @@ flyingPages();
 
     var interleaveOffset = 0.5;
     var swiperOptions = {
-      loop: true,
+      loop: false,
       speed: 1500,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: true,
-      },
+      autoplay: false,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -314,18 +311,18 @@ flyingPages();
           var $this = $(this).html(
             event.strftime(
               '' +
-                '<div class="box"><div><div class="time">%D</div> <span>' +
-                $('#clock').data('text-day') +
-                '</span> </div></div>' +
-                '<div class="box"><div><div class="time">%H</div> <span>' +
-                $('#clock').data('text-hour') +
-                '</span> </div></div>' +
-                '<div class="box"><div><div class="time">%M</div> <span>' +
-                $('#clock').data('text-minute') +
-                '</span> </div></div>' +
-                '<div class="box"><div><div class="time">%S</div> <span>' +
-                $('#clock').data('text-second') +
-                '</span> </div></div>',
+              '<div class="box"><div><div class="time">%D</div> <span>' +
+              $('#clock').data('text-day') +
+              '</span> </div></div>' +
+              '<div class="box"><div><div class="time">%H</div> <span>' +
+              $('#clock').data('text-hour') +
+              '</span> </div></div>' +
+              '<div class="box"><div><div class="time">%M</div> <span>' +
+              $('#clock').data('text-minute') +
+              '</span> </div></div>' +
+              '<div class="box"><div><div class="time">%S</div> <span>' +
+              $('#clock').data('text-second') +
+              '</span> </div></div>',
             ),
           );
         }

@@ -1470,7 +1470,9 @@ header#inner-navigation {
   z-index: 3;
 }
 .slide-inner.first {
-  background-position: center 30%;
+  background-position: center 20%;
+  object-fit: contain;
+  background-size: contain;
 }
 .slide-inner:before {
   background-color: #000;
