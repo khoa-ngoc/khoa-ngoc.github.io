@@ -10,46 +10,40 @@ let biicore = {
 
 var photoGalleries = [
   {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05101.webp',
+    src: './assets/images/khoa1.jpg',
     thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05101.webp',
+      './assets/images/khoa1.jpg',
     subHtml: `<div class="lg-sub-html"><h4>Tình yêu là điều kiện trong đó hạnh phúc của người khác là điều cần thiết cho chính bạn</h4></div>`,
   },
   {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG04424.webp',
+    src: './assets/images/khoa2.jpg',
     thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG04424.webp',
+      './assets/images/khoa2.jpg',
     subHtml: `<div class="lg-sub-html"><h4>Tình yêu không chỉ là một danh từ - nó là một động từ; nó còn hơn cả một cảm giác - đó là sự quan tâm, chia sẻ, giúp đỡ, hy sinh</h4></div>`,
   },
   {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05412.webp',
+    src: './assets/images/khoa3.jpg',
     thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05412.webp',
+      './assets/images/khoa3.jpg',
     subHtml: `<div class="lg-sub-html"><h4>Vì vậy, để được ai đó nhìn thấy đầy đủ và được yêu mến dù thế nào đi nữa — đây là một sự dâng hiến của con người có thể là điều kỳ diệu</h4></div>`,
   },
   {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG04905.webp',
+    src: './assets/images/khoa4.jpg',
     thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG04905.webp',
+      './assets/images/khoa4.jpg',
     subHtml: `<div class="lg-sub-html"><h4>Tình yêu không làm cho thế giới quay tròn. Tình yêu là những gì làm cho chuyến đi đáng giá</h4></div>`,
   },
   {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG04590.webp',
+    src: './assets/images/khoa5.jpg',
     thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG04590.webp',
+      './assets/images/khoa5.jpg',
     subHtml: `<div class="lg-sub-html"><h4>Tình yêu không có rào cản. Nó nhảy rào, nhảy rào, xuyên tường để đến đích với đầy hy vọng</h4></div>`,
   },
   {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05567.webp',
+    src: './assets/images/khoa6.jpg',
     thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05567.webp',
+      './assets/images/khoa6.jpg',
     subHtml: `<div class="lg-sub-html"><h4>Tôi yêu bạn vì tất cả những gì bạn đang có, tất cả những gì bạn đã có, và tất cả những gì bạn chưa hiện hữu</h4></div>`,
-  },
-  {
-    src: 'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05187.webp',
-    thumb:
-      'https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/images/wedding/HUG05187.webp',
-    subHtml: `<div class="lg-sub-html"><h4>Tôi có thể chinh phục thế giới bằng một tay miễn là bạn đang nắm tay kia</h4></div>`,
   },
 ];
 
