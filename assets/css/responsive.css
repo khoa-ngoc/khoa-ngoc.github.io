@@ -116,6 +116,13 @@
   .event-image {
     min-width: 192px;
   }
+
+  .mt-3{
+width: 100%;
+object-fit: cover;
+object-position: center top;
+height: auto;
+  }
   .widget-rsvp .widget-title {
     padding-top: 24px;
   }
