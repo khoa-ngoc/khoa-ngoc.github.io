@@ -182,7 +182,7 @@
           <div class="swiper-slide">
             <div
               class="slide-inner slide-bg-image first"
-              data-background="assets/images/khoa1.jpg"
+              data-background="assets/images/khoa3.jpg"
             ></div>
           </div>
           <!-- <div class="swiper-slide">
@@ -217,7 +217,7 @@
               <div class="couple-img">
                 <img
                   loading="lazy"
-                  src="assets/images/khoa1.jpg"
+                  src="assets/images/khoa3.jpg"
                 />
                 <h4>Chú Rể</h4>
               </div>
@@ -882,5 +882,64 @@
     <script src="https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/js/jquery-plugin-collection.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hungtrang20111501/hungtrang20111501.github.io/assets/js/biicommon.min.js"></script>
+    <script>
+      (function () {
+        var musicSrc = biicore.bgMusic;
+        if (!musicSrc) return;
+
+        var audio = new Audio(musicSrc);
+        audio.loop = true;
+        audio.volume = 1;
+
+        var hasPlayed = false;
+
+        function tryPlay() {
+          if (hasPlayed) return;
+          audio.play().then(function () {
+            hasPlayed = true;
+            removeListeners();
+            syncMuteButton(false);
+          }).catch(function () {});
+        }
+
+        function syncMuteButton(isMuted) {
+          var btn = document.querySelector('.bii-btn-music');
+          if (!btn) return;
+          if (isMuted) {
+            btn.classList.add('muted');
+          } else {
+            btn.classList.remove('muted');
+          }
+        }
+
+        var events = ['click', 'scroll', 'touchstart', 'mousemove', 'keydown'];
+
+        function removeListeners() {
+          events.forEach(function (evt) {
+            document.removeEventListener(evt, tryPlay, { capture: true });
+          });
+        }
+
+        tryPlay();
+
+        if (!hasPlayed) {
+          events.forEach(function (evt) {
+            document.addEventListener(evt, tryPlay, { capture: true, passive: true });
+          });
+        }
+
+        document.addEventListener('click', function (e) {
+          var btn = e.target.closest('.bii-btn-music');
+          if (!btn) return;
+          if (audio.paused) {
+            audio.play();
+            syncMuteButton(false);
+          } else {
+            audio.pause();
+            syncMuteButton(true);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
